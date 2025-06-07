@@ -16,7 +16,7 @@
     transform: translateY(20px);
     animation: titleReveal 1s ease forwards;
     animation-delay: 0.3s;
-    color: #1a5276 !important;
+    color: #000000 !important;
     text-transform: uppercase;
     font-family: 'Kumbh Sans', sans-serif;
 }
@@ -58,7 +58,7 @@
 /* Card map e info */
 .contact-page .map-card,
 .contact-page .info-card {
-    background-color: #1a5276 !important;
+    background-color: #000000 !important;
     color: #e0e0e0 !important;
     border-radius: 15px;
     padding: 30px;

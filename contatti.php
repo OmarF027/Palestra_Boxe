@@ -99,73 +99,93 @@
       display: block;
     }
   }
+
+  @media (max-width: 768px) {
+  .contact-logo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block;
+    float: none !important;
+    width: 80%; /* o 100%, come preferisci */
+    max-width: 325px;
+  }
+
+  /* Se il genitore è flexbox, forziamo il centro */
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 </style>
 
 <body class="contact-page">
   <!-- Contact Section -->
   <section id="contatti" class="contact-section">
     <div class="contact-header">
-<h1 style="opacity: 1 !important; font-size: 2.5rem !important; transform: translateY(0) !important; color: #1a5276 !important; margin-bottom: 0.5rem !important;">
+<h1 style="opacity: 1 !important; font-size: 2.5rem !important; transform: translateY(0) !important; color: #b20000 !important; margin-bottom: 0.5rem !important;">
   Contatti
 </h1>
 
-<p style="font-size: 1.5rem; margin-top: 0.2rem;" class="contact-text">
-  Per qualsiasi informazione, richiesta di prenotazioni o servizi, non esitare a contattarci! 
-  Il nostro staff è sempre a disposizione per offrirvi tutte le informazioni necessarie e assistervi nella scelta della sistemazione più adatta alle vostre esigenze.
-</p>
-
-<p style="font-size: 1.5rem; margin-top: 0.2rem;" class="contact-text">
-  Offriamo tariffe flessibili per soddisfare ogni tipo di soggiorno: giornaliere, settimanali e stagionali.
-</p>
-
-<p style="font-size: 1.5rem; margin-top: 0.2rem;" class="contact-text">
-  <strong>Prenota subito il tuo posto in spiaggia!</strong>
+<p style="font-size: 1.5rem; margin-top: 0.2rem; font-family: 'Raleway', sans-serif;" class="contact-text">
+ Vuoi informazioni sui corsi, prenotare una prova gratuita o scoprire di più sulla nostra struttura?  
+ Siamo qui per te: chiamaci, scrivici o passa a trovarci. <strong>Ti aspettiamo in palestra!</strong>
 </p>
 
     </div>
 
-    <div class="contact-grid">
-      <!-- Info -->
-      <div class="info-card">
-        <h3 class="section-title">
-          <i class="fas fa-info-circle"></i>
-          Informazioni
-        </h3>
-        <div class="contact-info">
-          <div class="info-item">
-            <i class="fas fa-map-pin"></i>
-            <p>58043 Punta Ala (GR)<br />Toscana, Italia</p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-clock"></i>
-            <p><strong>Orari di apertura:</strong><br />Tutti i giorni: 6:30 – 00:30<br>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-phone-alt"></i>
-            <p><a href="tel:+390564234567">+39 0564 234567</a></p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <p><a href="mailto:info@torretta21.com">info@torretta21.com</a></p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-file-alt" aria-hidden="true"></i>
-            <p>
-              <a href="privacy.php" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy" class="privacy-link">
-                Privacy Policy
-              </a>
-            </p>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-file-alt" aria-hidden="true"></i>
-            <p>
-              <a href="cookie_policy.php" target="_blank" rel="noopener noreferrer" aria-label="Cookie Policy" class="cookie-link">
-                Cookie Policy
-              </a>
-            </p>
-          </div>
-        </div>
+   <div class="contact-grid">
+  <!-- Info -->
+  <div class="info-card">
+    <h3 class="section-title">
+      <i class="fas fa-info-circle"></i>
+      Informazioni
+    </h3>
+    <div class="contact-info">
+      <div class="info-item">
+        <i class="fas fa-map-pin"></i>
+        <p>
+          Viale della Repubblica,<br />
+          58100 Grosseto (GR)<br />
+          Toscana, Italia
+        </p>
       </div>
+      <div class="info-item">
+        <i class="fas fa-clock"></i>
+        <p>
+          <strong>Orari di apertura:</strong><br />
+          Lunedì - Venerdì: 09:00 – 22:00<br />
+          Sabato: 09:00 – 12:00<br />
+          Domenica: Chiuso
+        </p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <p><a href="tel:+390564234567">+39 0564 234567</a></p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <p><a href="mailto:info@fightgymgrosseto.it">info@fightgymgrosseto.it</a></p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-file-alt" aria-hidden="true"></i>
+        <p>
+          <a href="privacy.php" target="_blank" rel="noopener noreferrer" aria-label="Privacy Policy" class="privacy-link">
+            Privacy Policy
+          </a>
+        </p>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-file-alt" aria-hidden="true"></i>
+        <p>
+          <a href="cookie_policy.php" target="_blank" rel="noopener noreferrer" aria-label="Cookie Policy" class="cookie-link">
+            Cookie Policy
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
 
       <!-- Logo a destra della card -->
       <div class="contact-logo">
