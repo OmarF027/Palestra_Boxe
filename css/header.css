@@ -1,0 +1,187 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+header, #home {
+  background-color: #000; /* solo header e home con sfondo nero */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+
+  /* Rendi trasparente per far vedere il background di #home */
+  background: transparent;
+
+  /* Fissalo in alto, sopra la sezione #home */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+
+  /* Rimuovi ombra infatti eventuali bordi scuri verrebbero sopra la foto */
+  box-shadow: none;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1002; /* Deve stare sempre sopra la foto e sopra il menu-toggle */
+  background: transparent;
+}
+
+.logo img {
+  height: 120px;
+  transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.2);
+}
+
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  /* Fisso in alto a destra, sopra la foto di #home */
+  position: fixed;
+  top: 25px;
+  right: 35px !important;
+  z-index: 1002; 
+  background: #f5f5f5 !important;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px !important;
+  height: 3px;
+  background: #333333; /* antracite */
+  transition: all 0.3s;
+  position: absolute;
+}
+
+.menu-toggle span:nth-child(1) {
+  transform: translateY(-8px);
+}
+
+.menu-toggle span:nth-child(2) {
+  transform: translateY(0);
+}
+
+.menu-toggle span:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a5276;
+  padding: 0 20px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+  z-index: 1000; /* Sotto logo/menu-toggle, sopra #home */
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+}
+
+.navigation.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.navigation ul li a {
+  font-family: 'Kumbh Sans', sans-serif;
+  text-decoration: none;
+  color: #ffffff; /* Colore dei link sul menu scuro */
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.navigation ul li a:hover,
+.navigation ul li a:focus {
+  background-color: #000; /* rosso corallo per hover */
+  color: #ffffff;
+  outline: none;
+}
+
+.navigation ul li a:active,
+.navigation ul li a.selected {
+  color: #bbbbbb; /* grigio chiaro per voce selezionata */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    top: 20px;
+    right: 20px !important;
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-toggle span {
+    width: 20px;
+    height: 3px;
+  }
+
+  .navigation {
+    padding: 0;
+  }
+
+  .navigation ul li a {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: none !important;
+  }
+}

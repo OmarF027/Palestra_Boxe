@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #F5F5F5 !important;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Header prenotazione */
+.booking-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-header h2 {
+    font-size: 2.2rem;
+    color: #2C6BED;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.booking-header p {
+    color: #64748B;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/*   SEZIONE SPIAGGIA E GRIGLIA */
+
+.spiaggia-section {
+    background: linear-gradient(to bottom, #E0F7FF, #F0FDFF);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.spiaggia-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, rgba(32, 148, 250, 0.15));
+}
+
+/* Legenda colori ombrelloni */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+.legend-color {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+}
+
+.legend-free {
+    background-color: #10B981; /* Verde */
+}
+
+.legend-booked {
+    background-color: #EF4444; /* Rosso */
+}
+
+.legend-selected {
+    background-color: #2C6BED; /* Blu */
+}
+
+/* Griglia ombrelloni */
+.spiaggia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
+    gap: 12px;
+    justify-content: center;
+}
+
+.ombrellone {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #10B981; /* verde per disponibile */
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    user-select: none;
+    transition: all 0.3s ease;
+    text-decoration: none; /* rimuove sottolineatura da <a> */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+}
+
+.ombrellone:hover:not(.prenotato):not(.selected) {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Ombrellone occupato */
+.ombrellone.prenotato {
+    background-color: #EF4444; /* rosso */
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.ombrellone.prenotato .ombrellone-icon {
+    color: white;
+    opacity: 0.2;
+}
+
+/* Ombrellone selezionato */
+.ombrellone.selected {
+    background-color: #2C6BED; /* blu */
+    transform: scale(1.08);
+    box-shadow: 0 0 0 3px white, 0 0 0 6px #2C6BED;
+}
+
+/* Icona all'interno di ogni ombrellone */
+.ombrellone-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    opacity: 0.2;
+}
+
+.form-section {
+    background: #F8FAFC;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #E2E8F0;
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.form-header i {
+    background: #2C6BED;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.form-header h3 {
+    font-size: 1.5rem;
+    color: #1E293B;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #334155;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #2C6BED;
+    box-shadow: 0 0 0 3px rgba(44, 107, 237, 0.2);
+}
+
+/* Bottone di invio */
+.btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 14px;
+    background: #2C6BED;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(44, 107, 237, 0.3);
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #1A54C8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(44, 107, 237, 0.4);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Info ombrellone selezionato */
+.selected-info {
+    background: #EFF6FF;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 4px solid #2C6BED;
+}
+
+.selected-info i {
+    color: #2C6BED;
+    font-size: 1.4rem;
+}
+
+.selected-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.selected-number {
+    font-size: 1.4rem;
+    color: #2C6BED;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* Caratteristiche aggiuntive */
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+
+.feature i {
+    color: #10B981;
+    font-size: 1.1rem;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .spiaggia-grid {
+        grid-template-columns: repeat(auto-fit, minmax(55px, 1fr));
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+    
+    .booking-header h2 {
+        font-size: 1.8rem;
+    }
+}
+

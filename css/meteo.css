@@ -1,0 +1,46 @@
+.weather-container {
+  max-width: 600px;          /* aumenta la larghezza massima */
+  width: 100%;               /* per sfruttare lo spazio disponibile */
+  min-height: 150px;         /* altezza minima per dare un bel rettangolo */
+  margin: 2rem auto;
+  padding: 1rem 2rem;        /* padding orizzontale aumentato per respirare */
+  background-color: #1a5276;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #e5e5e5;
+  text-align: center;
+  box-sizing: border-box;   /* include padding in width */
+}
+
+.weather-container h2 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;       /* abbassa la scritta */
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+  color: #f5f5f5;
+  word-break: break-word;
+}
+
+#weather-info {
+  font-size: 1rem;
+  word-wrap: break-word;    /* evita overflow testo */
+}
+
+@media (max-width: 480px) {
+  .weather-container {
+    padding: 1rem 1rem;      /* padding ridotto per spazio limitato */
+    min-height: auto;
+    margin: 1rem auto;
+  }
+
+  .weather-container h2 {
+    font-size: 1rem;
+    margin-top: 1rem;        /* meno spazio sopra su mobile */
+    padding: 0 1rem;
+  }
+
+  #weather-info {
+    font-size: 0.9rem;
+  }
+}
