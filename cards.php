@@ -1,127 +1,207 @@
-<!-- Font e Icone -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lato:wght@400&family=Raleway:wght@300&display=swap" rel="stylesheet" />
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fight Gym Grosseto</title>
 
-<link rel="stylesheet" href="css/cards.css" />
+  <!-- Font e Icone -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Lato:wght@400&family=Raleway:wght@300&display=swap" rel="stylesheet" />
 
-<style>
-body {
-  background-color: #eaeaea !important;
-}
- 
-    #servizi .intro-text {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
+  <style>
+    body {
+      background-color: #eaeaea !important;
+      font-family: 'Lato', sans-serif;
+    }
 
-.grid-gallery {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
+    .section-inner {
+      padding: 2rem;
+    }
 
-.section-inner {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
+    .table-wrapper {
+      overflow-x: auto;
+      width: 100%;
+      margin-top: 2rem;
+    }
 
-#affiliazioni {
-  margin: 0; /* rimuove margini esterni */
-  padding: 2rem 0; /* puoi regolare il padding verticale a piacere */
-}
+    table.schedule {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 1rem;
+      text-align: center;
+    }
 
-#affiliazioni h2 {
-  margin-top: 0;
-  margin-bottom: 1rem; /* o 0 se vuoi togliere del tutto */
-}
+    .schedule thead {
+      background-color: #333;
+      color: white;
+    }
 
-#servizi img {
-  max-height: 150px;
-  height: auto;
-  width: auto;
-}
+    .schedule th, .schedule td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      vertical-align: middle;
+    }
 
-</style>
+    .schedule td.active {
+      background-color: #f5f5f5;
+      font-weight: bold;
+      color: #222;
+    }
 
+    .schedule td.inactive {
+      background-color: #fafafa;
+      color: #aaa;
+    }
+
+    .affiliazioni img {
+      max-height: 80px;
+      width: auto;
+      margin-right: 1.5rem;
+    }
+
+    #servizi.affiliazioni {
+      margin-top: -20px !important;
+    }
+
+    /* Miglioramenti tablet */
+    @media (max-width: 768px) {
+      table.schedule {
+        font-size: 1.1rem;
+        width: 100%;
+      }
+
+      .schedule th, .schedule td {
+        padding: 16px 12px;
+      }
+
+      .section-inner {
+        padding: 1.5rem;
+      }
+
+      .affiliazioni img {
+        max-height: 70px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* Miglioramenti mobile: stack verticale */
+    @media (max-width: 480px) {
+      table.schedule,
+      table.schedule thead,
+      table.schedule tbody,
+      table.schedule th,
+      table.schedule td,
+      table.schedule tr {
+        display: block;
+      }
+
+      table.schedule thead {
+        display: none;
+      }
+
+      table.schedule tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      table.schedule td {
+        text-align: left;
+        padding: 10px 16px;
+        position: relative;
+      }
+
+      table.schedule td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 4px;
+        color: #b20000;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <section id="servizi" class="sezione">
-        <div class="section-inner">
-            <h2 style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1.1;">FIGHT GYM GROSSETO</h2>
-            <p style="font-size: 1.5rem;" class="intro-text">
-                <strong>Fight Gym Grosseto</strong>: da oltre 30 anni punto di riferimento negli sport da combattimento in Toscana.  
-                Offriamo corsi di <strong>pugilato</strong>, kickboxing, muay thai, lotta, ju jitsu e difesa personale, rivolti sia a principianti che ad agonisti,  
-                con istruttori qualificati e una struttura all’avanguardia.  
-                Nel corso degli anni abbiamo formato atleti di altissimo livello, che hanno portato i nostri colori sui <strong>podi nazionali e internazionali</strong>.
-            </p>
-        </div>
-    </section>
+  <!-- Intro -->
+  <section id="servizi" class="sezione">
+    <div class="section-inner">
+      <h2 style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1.1;">FIGHT GYM GROSSETO</h2>
+      <p style="font-size: 1.5rem;" class="intro-text">
+        <strong>Fight Gym Grosseto</strong>: da oltre 30 anni punto di riferimento negli sport da combattimento in Toscana.  
+        Offriamo corsi di <strong>pugilato</strong>, kickboxing, muay thai, lotta, ju jitsu e difesa personale, rivolti sia a principianti che ad agonisti,  
+        con istruttori qualificati e una struttura all’avanguardia.  
+        Nel corso degli anni abbiamo formato atleti di altissimo livello, che hanno portato i nostri colori sui <strong>podi nazionali e internazionali</strong>.
+      </p>
 
- <div class="grid-gallery">
-    <!-- Card 1 -->
-    <div class="item gallery-item">
-        <img src="img/pugilato.jpg" alt="Pugilato">
-        <div class="content">
-            <h3>PUGILATO</h3>
-        </div>
+      <!-- Tabella Orari -->
+      <h2 style="font-size: 2.5rem; margin-top: 2rem; color: #b20000;">ORARI CORSI</h2>
+      <div class="table-wrapper">
+        <table class="schedule">
+          <thead>
+            <tr>
+              <th>Corso</th>
+              <th>Lunedì</th>
+              <th>Martedì</th>
+              <th>Mercoledì</th>
+              <th>Giovedì</th>
+              <th>Venerdì</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Corso">Pugilato</td>
+              <td class="active" data-label="Lunedì">9:00 - 10:15<br>13:15 - 14:30<br>20:45 - 22:00
+              <td class="inactive" data-label="Martedì"></td>
+              <td class="active" data-label="Mercoledì">9:00 - 10:15<br>16:00 - 17:15<br>20:45 - 22:00</td>
+              <td class="active" data-label="Giovedì">13:15 - 14:30</td>
+              <td class="active" data-label="Venerdì">9:00 - 10:15<br>16:00 - 17:15<br>20:45 - 22:00</td>
+            </tr>
+            <tr>
+              <td data-label="Corso">Kickboxing</td>
+              <td class="active" data-label="Lunedì">19:30 - 21:00</td>
+              <td class="inactive" data-label="Martedì"></td>
+              <td class="active" data-label="Mercoledì">19:30 - 21:00</td>
+              <td class="inactive" data-label="Giovedì"></td>
+              <td class="active" data-label="Venerdì">19:30 - 21:00</td>
+            </tr>
+            <tr>
+              <td data-label="Corso">Muay Thai</td>
+              <td class="active" data-label="Lunedì">18:30 - 20:00</td>
+              <td class="inactive" data-label="Martedì"></td>
+              <td class="active" data-label="Mercoledì">18:30 - 20:00</td>
+              <td class="inactive" data-label="Giovedì"></td>
+              <td class="active" data-label="Venerdì">18:30 - 20:00</td>
+            </tr>
+            <tr>
+              <td data-label="Corso">Ju Jitsu</td>
+              <td class="inactive" data-label="Lunedì"></td>
+              <td class="active" data-label="Martedì">18:00 - 19:30</td>
+              <td class="inactive" data-label="Mercoledì"></td>
+              <td class="active" data-label="Giovedì">18:00 - 19:30</td>
+              <td class="inactive" data-label="Venerdì"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+  </section>
 
-    <!-- Card 2 -->
-    <div class="item gallery-item">
-        <img src="img/kickboxe.jpg" alt="Kickboxing">
-        <div class="content">
-            <h3>KICKBOXING</h3>
-        </div>
+  <!-- Affiliazioni -->
+  <section id="servizi" class="sezione affiliazioni">
+    <div class="section-inner">
+      <h2 style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1.1;">AFFILIAZIONI</h2>
+      <a href="https://www.fpi.it" target="_blank" rel="noopener" style="text-decoration:none;">
+        <img src="img/fpi_logo.jpg" alt="Federazione Italia Pugilato" />
+      </a>
+      <a href="https://www.pgsitalia.org" target="_blank" rel="noopener" style="text-decoration:none;">
+        <img src="img/psg_logo.jpg" alt="PGS" />
+      </a>
     </div>
-
-    <!-- Card 3 -->
-    <div class="item gallery-item">
-        <img src="img/muaythai.jpg" alt="Muay Thai">
-        <div class="content">
-            <h3>MUAY THAI</h3>
-        </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="item gallery-item">
-        <img src="img/lotta.jpg" alt="Lotta">
-        <div class="content">
-            <h3>LOTTA</h3>
-        </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="item gallery-item">
-        <img src="img/ju-jitsu.jpg" alt="Ju Jitsu">
-        <div class="content">
-            <h3>JU JITSU</h3>
-        </div>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="item gallery-item">
-        <img src="img/difesa-personale.jpg" alt="Difesa Personale">
-        <div class="content">
-            <h3>DIFESA PERSONALE</h3>
-        </div>
-    </div>
-</div>
-
-<section id="servizi" class="sezione affiliazioni">
-  <div class="section-inner">
-    <h2 style="font-size: 2.5rem; margin-bottom: 0.8rem; line-height: 1.1;">AFFILIAZIONI</h2>
-    <a href="https://www.fpi.it" target="_blank" rel="noopener" style="text-decoration:none;">
-      <img src="img/fpi_logo.jpg" alt="Federazione Italia Pugilato" />
-    </a>
-    <a href="https://www.pgsitalia.org" target="_blank" rel="noopener" style="text-decoration:none;">
-      <img src="img/psg_logo.jpg" alt="PGS" />
-    </a>
-  </div>
-</section>
-
-<style>
-  #servizi.affiliazioni {
-    margin-top: -20px !important;
-  }
-</style>
-
+  </section>
 </body>
+</html>

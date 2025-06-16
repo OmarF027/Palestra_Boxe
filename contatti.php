@@ -146,9 +146,7 @@
       <div class="info-item">
         <i class="fas fa-map-pin"></i>
         <p>
-          Viale della Repubblica,<br />
           58100 Grosseto (GR)<br />
-          Toscana, Italia
         </p>
       </div>
       <div class="info-item">
@@ -189,7 +187,7 @@
 
       <!-- Logo a destra della card -->
       <div class="contact-logo">
-        <img src="img/logo.jpg" alt="Fight Gym Grosseto Logo" />
+        <img src="img/logo2.jpg" alt="Fight Gym Grosseto Logo" />
       </div>
     </div>
 

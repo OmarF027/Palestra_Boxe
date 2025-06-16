@@ -13,10 +13,7 @@ $isHome = ($currentPage === 'index.php');
    <nav class="navigation" id="main-navigation">
     <ul>
         <li><a href="<?php echo $isHome ? '#home' : 'index.php#home'; ?>">Home</a></li>
-        <li><a href="chisiamo.php">Chi Siamo</a></li>
         <li><a href="<?php echo $isHome ? '#servizi' : 'index.php#corsi'; ?>">Corsi</a></li>
-        <li><a href="<?php echo $isHome ? '#orari' : 'index.php#orari'; ?>">Orari</a></li>
-        <li><a href="albo.php">Albo d'Oro</a></li>
         <li><a href="<?php echo $isHome ? '#contatti' : 'index.php#contatti'; ?>">Contatti</a></li>
     </ul>
 </nav>
